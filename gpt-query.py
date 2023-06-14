@@ -2,7 +2,7 @@ import os
 import json
 import openai
 
-openai.api_key = 'YOUR_API_KEY'
+openai.api_key = ''
 
 # Read JSON files from the city-place directory
 directory = "city-place"
@@ -39,13 +39,13 @@ for filename in file_list:
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=chat,
-        max_tokens=100  # Adjust the max tokens limit as per your needs
+        max_tokens=100
     )
 
-    # Get the assistant's reply
+    # Get the reply
     assistant_reply = response.choices[0].message['content']
 
-    # Create a new JSON file with the assistant's reply
+    # Create a new JSON file with the reply
     output_filepath = os.path.join(output_directory, f"{filename.split('.')[0]}_contact.json")
     output_data = {"response": assistant_reply}
 

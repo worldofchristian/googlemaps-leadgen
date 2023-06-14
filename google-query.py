@@ -4,7 +4,7 @@ import json
 import pickle
 
 # Google Places API
-api_key = 'YOUR_API_KEY'
+api_key = ''
 
 with open("cities.pickle", "rb") as file:
     imported_cities = pickle.load(file)
