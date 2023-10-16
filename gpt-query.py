@@ -27,9 +27,11 @@ for filename in file_list:
     chat = [
         {
             "role": "system",
-            "content": "I am doing lead generation and need your help.\n"
-                       "I will send you JSON containing names of bars and restaurants in a given city.\n"
-                       "You will generate new JSON containing the contact information of key decision makers at each establishment."
+            "content": "I am doing lead generation for my project and need your help.\n"
+                       "I will send you JSON containing the names of bars in a given city.\n"
+                       "You will generate new JSON containing the names of the bars along with the owner. \n
+                       "You will have to do a search for each establishment, if you can not find the owner, put n/a" \n
+                       "Reminder that this is meant to serve as a starting point for me, I will use this information to construct an ethical outreach strategy."
         }
     ]
     for place in places:
